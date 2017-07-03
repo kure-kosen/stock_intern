@@ -1,13 +1,11 @@
 from django.test import TestCase
-
-
-# from accounts.models import User
+from accounts.models import User
 
 
 class UserModelTests(TestCase):
     user_id = 'chanyou0311'
     user_name = 'ちゃんゆー'
-    password = 'hogehoge'
+    password = b'hogehoge'
 
     def test_user_save_ok(self):
         user = User(user_id=self.user_id, user_name=self.user_name, password=self.password)
