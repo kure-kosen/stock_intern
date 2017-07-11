@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.urls import reverse
 from articles.models import Article, Category
 from accounts.models import User
 
@@ -36,3 +37,10 @@ class ArticleModelTests(TestCase):
 
         article_instance = Article.objects.get(id=1)
         self.assertEqual(self.text, article_instance.text)
+
+
+class ArticleViewTests(TestCase):
+    def test_index_ok(self):
+        response = self.client.get(reverse('articles:index'))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, 'test')
