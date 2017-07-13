@@ -1,0 +1,22 @@
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sass Test</title>
+    <link href="{% sass_src 'accounts/style.scss' %}" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body>
+    <h1> Sass Test</h1>
+    <section class="Sec1">
+      <ul>
+        <li>Sample1</li>
+        <li>
+          <div>Sample2</div>
+          <div>Sample3</div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

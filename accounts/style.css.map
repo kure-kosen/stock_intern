@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "../../Users/taira/workspace/stock_intern/accounts/static/accounts/style.css",
+	"sources": [
+		"../../Users/taira/workspace/stock_intern/accounts/static/accounts/style.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACK,KADA,GACA,EAAE,CAAA;EACC,UAAU,EAAE,IAAI;EAChB,WAAW,EAAE,CAAC,GAWjB;EAdL,AAMiB,KANZ,GACA,EAAE,CAGC,EAAE,AACE,WAAY,GACP,GAAG,CAAA;IACA,KAAK,EAAE,IAAI,GACd;EARjB,AAIQ,KAJH,GACA,EAAE,CAGC,EAAE,AACE,WAAY,AAIR,MAAO,CAAA;IACH,KAAK,EAAE,IAAI,GACd"
+}

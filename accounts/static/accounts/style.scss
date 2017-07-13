@@ -1,0 +1,16 @@
+.Sec1{
+    >ul{
+        list-style: none;
+        margin-left: 0;
+        li{
+            &:last-child{
+                >div{
+                    float: left;
+                }
+                &:after{
+                    clear: both;
+                }
+            }
+        }
+    }
+}
