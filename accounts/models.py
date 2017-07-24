@@ -5,7 +5,7 @@ import hashlib
 
 class User(models.Model):
     now = datetime.datetime.now
-    user_id = models.CharField(max_length=128)
+    user_id = models.CharField(max_length=128, unique=True)
     user_name = models.CharField(max_length=128)
     password = models.CharField(max_length=128)
     created = models.DateTimeField(default=now)
