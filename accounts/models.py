@@ -14,3 +14,6 @@ class User(models.Model):
     def save(self, force_insert=False, force_update=False):
         self.password = hashlib.md5(self.password.encode('utf-8')).hexdigest()
         super(User, self).save(force_insert, force_update)
+
+    def __str__(self):
+        return self.user_id

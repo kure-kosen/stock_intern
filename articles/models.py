@@ -9,6 +9,9 @@ class Category(models.Model):
     created = models.DateTimeField(default=now)
     updated = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.category_name
+
 
 class Article(models.Model):
     now = datetime.datetime.now
@@ -18,3 +21,6 @@ class Article(models.Model):
     category_id = models.ForeignKey(Category, on_delete=models.CASCADE, db_column='category_id')
     created = models.DateTimeField(default=now)
     updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
