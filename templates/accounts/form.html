@@ -2,7 +2,9 @@
   <body>
     <form action="" method="POST">
       {% csrf_token %}
-      {{ form }}
+      <table>
+        {{ form }}
+      </table>
       <input type="submit" value="Submit"/>
     </form>
   </body>

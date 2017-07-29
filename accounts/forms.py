@@ -1,4 +1,6 @@
 from django import forms
 
-class MyForm(forms.Form):
-    text = forms.CharField(max_length=128)
+class UserForm(forms.Form):
+    user_id = forms.CharField()
+    user_name = forms.CharField()
+    password = forms.CharField()

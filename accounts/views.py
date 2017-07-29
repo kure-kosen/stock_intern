@@ -1,16 +1,14 @@
 from django.shortcuts import render
-
+from django.views.generic.edit import CreateView
 from django.views.generic import FormView
 from django.core.urlresolvers import reverse_lazy
+from .models import User
 
-from .forms import MyForm
 
-
-class FormTest(FormView):
-    form_class = MyForm
+class UserCreate(CreateView):
+    model = User
     template_name = 'accounts/form.html'
-    success_url = reverse_lazy('accounts:index')
-
+    fields = ("user_id", "user_name", "password" )  # リストもしくはタプル
 
 # form_test = FormTest.as_view()
 
