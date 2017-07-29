@@ -12,6 +12,7 @@ class Category(models.Model):
 
 class Article(models.Model):
     now = datetime.datetime.now
+    title = models.CharField(max_length=128, default="non title")
     text = models.TextField()
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_id')
     category_id = models.ForeignKey(Category, on_delete=models.CASCADE, db_column='category_id')
