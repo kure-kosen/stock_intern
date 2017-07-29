@@ -6,7 +6,7 @@ from django.db.utils import IntegrityError
 class UserModelTests(TestCase):
     user_id = 'chanyou0311'
     user_name = 'ちゃんゆー'
-    password = b'hogehoge'
+    password = 'hogehoge'
 
     def test_user_save_ok(self):
         user = User(user_id=self.user_id, user_name=self.user_name, password=self.password)
