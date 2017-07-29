@@ -12,5 +12,5 @@ class User(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def save(self, force_insert=False, force_update=False):
-        self.password = hashlib.md5(self.password).hexdigest()
+        self.password = hashlib.md5(self.password.encode('utf-8')).hexdigest()
         super(User, self).save(force_insert, force_update)

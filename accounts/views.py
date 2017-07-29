@@ -9,6 +9,7 @@ class UserCreate(CreateView):
     model = User
     template_name = 'accounts/form.html'
     fields = ("user_id", "user_name", "password" )  # リストもしくはタプル
+    success_url = reverse_lazy('accounts:index')
 
 # form_test = FormTest.as_view()
 
