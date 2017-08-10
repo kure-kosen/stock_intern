@@ -3,24 +3,29 @@
 <html lang="ja">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title> Top page </title>
+  <title>stock intern</title>
 </head>
 <body>
-  <div id="header"> <a href="#" id="header-p-a" title="link to top page">サイト名</a>
-    <h1> サブタイトル </h1>
+  <div id="header">
+    <h1><a href="#" id="header-p-a" title="link to top page">stock intern</a></h1>
   </div>
   <div id="box">
-    <!--メイン-->
     <div id="main">
-      <!--エントリー-->
       <div class="entry">
+	{% for article in articles %}
         <div class="entryblock">
-          <h2><a href="http://weboook.blog22.fc2.com/blog-entry-415.html">jQueryとCSSのtransitionで可視範囲に入ってからアニメーションさせる方法</a></h2>
-          <div class="posted"> <span class="post-date">2017.07.22 </span> <a href="http://weboook.blog22.fc2.com/blog-category-2.html" class="category-icon">カテゴリ：JavaScript</a> </div>
+          <h2><a href="#">{{ article.title }}</a></h2>
+          <div class="posted">
+	    <span class="post-date">{{ article.created }}</span>
+	    <a href="#" class="category-icon">{{ article.category_id.category_name }}</a>
+	  </div>
           <div class="topentry">
-            <p>可視範囲になってから表示されたり動いたり、スクロールに応じてアニメーションさせる方法を紹介します。動きをつけて目を引くことで、効果的に伝えることができるかもしれません。</p> <img src="./hoge_files/jquery-scroll-effect2.png" alt="jquery-scroll-effect2.png" border="0" width="1000" height="500"></div>
+            <p>{{ article.text }}</p>
+	    <img src="http://lorempixel.com/1000/500/cats/" alt="sample image">
+	  </div>
           <div class="next"> <a href="http://weboook.blog22.fc2.com/blog-entry-415.html">続きを読む</a> </div>
         </div>
+	{% endfor %}
       </div>
     </div>
   </div>
