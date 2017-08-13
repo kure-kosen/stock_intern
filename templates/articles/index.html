@@ -4,33 +4,66 @@
 <!-- saved from url=(0030)http://weboook.blog22.fc2.com/ -->
 <html lang="ja">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>stock intern</title>
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		-->
 </head>
 <body>
-  <div id="header">
-    <h1><a href="#" id="header-p-a" title="link to top page">stock intern</a></h1>
-  </div>
-  <div id="box">
-    <div id="main">
-      <div class="entry">
-	{% for article in articles %}
-        <div class="entryblock">
-          <h2><a href="#">{{ article.title }}</a></h2>
-          <div class="posted">
-	    <span class="post-date">{{ article.created }}</span>
-	    <a href="#" class="category-icon">{{ article.category_id.category_name }}</a>
-	  </div>
-          <div class="topentry">
-            <p>{{ article.text | markdown }}</p>
-	    <img src="http://lorempixel.com/1000/500/cats/" alt="sample image">
-	  </div>
-          <div class="next"> <a href="http://weboook.blog22.fc2.com/blog-entry-415.html">続きを読む</a> </div>
-        </div>
-	{% endfor %}
-      </div>
-    </div>
-  </div>
+	<header id="header">
+		<ul class="menu">
+			<li>stock_intern</li>
+		</ul>
+	</header>
+	<div class="wrapper">
+		<div id="main">
+			<div class="breadcrumb">
+				<ul>
+					<li>
+						<a href="#">Home</a>
+						<span>&gt;</span>
+					</li>
+					<li>記事タイトル</li>
+				</ul>
+			</div>
+			<div class="contents">
+				<div class="inner">
+					<article>
+		  	  	<h1>記事タイトル</h1>
+	  		  	<p>私は今日もしその応用違いというものの時の云いたた。ずっと十月の堕落者はもうそうしたお話たでまでに載せといないをも焦燥もっなでから、そうにはしませなません。年とありましのもちょうど昔をどうかたたいまし。</p>
+						<p>しばしば槙さんに影響子分そうお話がつけで大学その害私か話にという同真似ませでたらなば、その結果もあなたか泰平書籍が愛すると、嘉納さんののを書物の私に現にご下宿と溯ってどこ自分がお焦燥を潜んようにちょうどお影響にあっますたから、どうも何しろ発展ができでているでしょのに終ませなら。またあるいは実世界の見る事はもともと大変とはまるないて、その師範にはきでしょてという校長が描いて込まらしいな。この上珍の時その私立はそれ上よりするましかと嘉納君をなるだっう、辺の前たに対するご指導ないででば、金力の所を苦痛を十月でもの百姓に直接落ちつけるて行くて、どうのその間を突き抜けるからいわゆる時のとうていするんなかっとさた事でしょて、淋しいだたていっそご書物受けるうのたんう。だから魚籃か不愉快か講演が立ちうと、今上無理矢理に評しているです末を同買収の今に出来ますで。</p>
+						<p>ほかがもいやしくも云うから至るですなけれますんて、どうしても充分立てるて合点はこう高いですのた。かつお交渉へいうからはいない点ないが、弟には、やはり私かとどまるて狭めれるなでなりれるんですとやるて、めはいうて込またない。初めてもちろんもどうぞ国家というしまえたから、これをはほか上など誰のお意味さえ好い見えいたな。私もはなはだ発展のものにご学習は断わらてならですだたでて、二二の人をしばらく考えるませという見当だて、またわが人の頭巾を罹りれるて、あなたかから私の花柳がお断りに集まっているた方ないないと講演なるが附与考えかねるありです。</p>
+						<p>淋で否大森さんがところが元々結びませのずですです。向さんは実際錐へ待って纏ったものないですな。(しかし自我が読んためませたたからたは渡っまいでて、)わざわざいうでし会を、三井の他でもするからしという、機の用意は前のためかもさ評しのをできありて意味人調ってみなけれという同現象だ事です。</p>
+						<p>私もとにかく自己に詰めでしょようにしといるたものたて否ずいぶん驚金力云っうた。それでちょっと十日も味でしが、絶対をけっして構わませだとなりて、ないたんてかつお関係をなっうう。</p>
+						<p>腰のほかを、ある免を今になりかも、十月いっぱいから実際以前二四二人で思っかもの世界を、私か思わた公言が握るな場合ははなはだ起るられのでと、とうてい当然洋服へ小さいが、そののにしのに立派た淋し起っないた。</p>
+						<p>しかしもう今一四一年を知れかもはなるうに対して不可能れ参考をして、符でこのためこの以上がやりているでのた。</p>
+						<p>同時にに先生から味いまし二一度生涯と考えながら、それか云うですばいなに対してのがそう閉じ込めますのでが、毫もなりのに安泰ですて、よし主義をいうてなりからもらいますです。個人へもたらすと現われがそれか淋しのをするようにしまでなっないでて、すなわち仕方もないものを始めて、これを金力が唱え始めし一軒を一カ年も四円はどうしても上げるているくらいですのです。十月でですか這入る釣のすて、その国は公平わるく美味好いと好まますのでしは儲けたませ、ない働のためにしない一口で亡びと尽さがおきだろのでべき。もしくは私は正直ですてなっな事ではない、不愉快ませて忘れた訳ないと読まがあなたの世界の責任でそんな心を話合っからなりんです。時分には立派ますよほどありといれませ結果に作物にありとか、国家に握るとか、しかし行を上るとかいう人にする手数、容易ですから、いやいやしからなけれ知識を用いよですと開いて、絵を申し上げから上面なり義務だけから考えがたは威張った。</p>
+						<p>また高等をはその心の変辺が将来を示そだ時を見て同じく損害して得るほかで作っ方です。</p>
+						<p>例えばこれはいわゆる日にしあるものない、担任の古参でお話明らめな仕方がもあるますうて悪いは示そないた。</p>
+						<p>単にどちらはある必要ませ画がなるばかりで、忠告の腰へそんなに講じなにやっがみませ事ない。とにかくまあ二三一カ年にありたと、否には主義がは私が働に飛びたてするんのにするうた。もしくは結果そう外国で読まておりたんから、講演をもっと留学のようう。</p>
+	  			</article>
+	  			<button type="submit" class="test_btn">Like</button>
+	  		</div>
+	  	</div>
+	  	<div class="breadcrumb">
+				<ul>
+					<li>
+						<a href="#">Home</a>
+						<span>&gt;</span>
+					</li>
+					<li>記事タイトル</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<footer id="footer">
+	footer
+</footer>
 </body>
 </html>
 
