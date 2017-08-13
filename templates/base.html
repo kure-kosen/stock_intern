@@ -1,40 +1,30 @@
 {% load staticfiles %}
-<html>
-<head>
-    <title>test</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-    <nav class="navbar navbar-default">
-	<div class="container-fluid">
-            <div class="navbar-header">
-		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-		</button>
-		<a class="navbar-brand" href="#">stock intern</a>
-            </div>	  
-            <div class="collapse navbar-collapse" id="navbarEexample1">
-		<ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Articles</a></li>
-                    <li><a href="#">Acounts</a></li>
-                    <li><a href="#">About</a></li>
-		</ul>
-            </div>
+
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://weboook.blog22.fc2.com/ -->
+<html lang="ja">
+    <head>
+	<title>stock-intern</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	   -->
+    </head>
+    <body>
+	<header id="header">
+	    <ul class="menu">
+		<li>stock_intern</li>
+	    </ul>
+	</header>
+	<div class="wrapper">
+	    {% block contents %}{% endblock %}
 	</div>
-    </nav>
-    <div class="container">
-	<div class="row">
-            <div class="col-md-12">
-		{% block content %}
-		{% endblock %}
-            </div>
-	</div>
-    </div>
-</body>
+	<footer id="footer">
+	    footer
+	</footer>
+    </body>
 </html>
