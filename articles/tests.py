@@ -7,7 +7,7 @@ from accounts.models import User
 class ArticleModelTests(TestCase):
     user_id = 'chanyou0311'
     user_name = 'ちゃんゆー'
-    password = b'hogehoge'
+    password = 'hogehoge'
     category_name = '長期インターンシップ'
     text = "親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。" \
            "なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。"
