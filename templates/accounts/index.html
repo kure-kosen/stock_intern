@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block contents %}
+
+{% for user in users %}
+	<h2>{{ user.user_id }}</h2>
+	<p>ユーザーネーム:{{ user.user_name }}</p>
+	<p>更新日時：{{ user.updated }}</p>
+{% endfor %}
+
+{% endblock contents %}
