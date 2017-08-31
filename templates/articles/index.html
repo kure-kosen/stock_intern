@@ -10,6 +10,8 @@
   {% for article in articles %}
   <article>
     <h3 class="article-title">{{ article.title }}</h3>
+    <p class="article-text" >作成者：{{ article.user_id }}</p>
+    <p class="article-text text-right" >{{ article.created }}</p>
     <p class="article-text">{{ article.text | truncatewords:20 }}</p>
     <img class="img-responsive ariticle-img" src="http://lorempixel.com/480/200/cats/" alt="sample image">
     <a class="btn btn-link pull-right" href="#" role="button">続きを読む</a>
