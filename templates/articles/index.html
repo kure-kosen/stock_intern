@@ -2,54 +2,54 @@
 {% load markdown_deux_tags %}
 {% block contents %}
 <div id="main">
-    <div class="breadcrumb">
-	<ul>
-	    <li>
-		<a href="#">Home</a>
-		<span>&gt;</span>
-	    </li>
-	    <li>記事タイトル</li>
-	</ul>
-    </div>
-    <div class="contents">
-	<div class="inner">	   
-	    {% for article in articles %}
-	    <article>
-		<div class="entryblock">
-		    <h2><a href="#">{{ article.title }}</a></h2>
-		    <div class="posted">
-			<span class="post-date">{{ article.created }}</span>
-			<a href="#" class="category-icon">{{ article.category_id.category_name }}</a>
-		    </div>
-		    <div class="topentry">
-			<img src="http://lorempixel.com/1000/500/cats/" alt="sample image">
-			<p>{{ article.text | markdown }}</p>
-		    </div>
-		    <div class="next"> <a href="#">続きを読む</a> </div>
-		</div>
-	    </article>
-	    <button type="submit" class="test_btn">Like</button>
-	    <div class="breadcrumb">
-		<ul>
-		    <li>
-			<a href="#">Home</a>
-			<span>&gt;</span>
-		    </li>
-		    <li>記事タイトル</li>
-		</ul>
-	    </div>
-	    {% endfor %}
+  <div class="breadcrumb">
+    <ul>
+      <li>
+	<a href="#">Home</a>
+	<span>&gt;</span>
+      </li>
+      <li>記事タイトル</li>
+    </ul>
+  </div>
+  <div class="contents">
+    <div class="inner">	   
+      {% for article in articles %}
+      <article>
+	<div class="entryblock">
+	  <h2><a href="#">{{ article.title }}</a></h2>
+	  <div class="posted">
+	    <span class="post-date">{{ article.created }}</span>
+	    <a href="#" class="category-icon">{{ article.category_id.category_name }}</a>
+	  </div>
+	  <div class="topentry">
+	    <img src="http://lorempixel.com/1000/500/cats/" alt="sample image">
+	    <p>{{ article.text | markdown }}</p>
+	  </div>
+	  <div class="next"> <a href="#">続きを読む</a> </div>
 	</div>
+      </article>
+      <button type="submit" class="test_btn">Like</button>
+      <div class="breadcrumb">
+	<ul>
+	  <li>
+	    <a href="#">Home</a>
+	    <span>&gt;</span>
+	  </li>
+	  <li>記事タイトル</li>
+	</ul>
+      </div>
+      {% endfor %}
     </div>
+  </div>
 
 </div>
 
 <div id="box">
-    <div id="main">
-	<div class="entry">
+  <div id="main">
+    <div class="entry">
 
-	</div>
     </div>
+  </div>
 </div>
 {% endblock contents %}
 
