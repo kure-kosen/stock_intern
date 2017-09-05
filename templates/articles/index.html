@@ -1,55 +1,22 @@
 {% extends "base.html" %}
 {% load markdown_deux_tags %}
 {% block contents %}
-<div id="main">
-  <div class="breadcrumb">
-    <ul>
-      <li>
-	<a href="#">Home</a>
-	<span>&gt;</span>
-      </li>
-      <li>記事タイトル</li>
-    </ul>
-  </div>
-  <div class="contents">
-    <div class="inner">	   
-      {% for article in articles %}
-      <article>
-	<div class="entryblock">
-	  <h2><a href="#">{{ article.title }}</a></h2>
-	  <div class="posted">
-	    <span class="post-date">{{ article.created }}</span>
-	    <a href="#" class="category-icon">{{ article.category_id.category_name }}</a>
-	  </div>
-	  <div class="topentry">
-	    <img src="http://lorempixel.com/1000/500/cats/" alt="sample image">
-	    <p>{{ article.text | markdown }}</p>
-	  </div>
-	  <div class="next"> <a href="#">続きを読む</a> </div>
-	</div>
-      </article>
-      <button type="submit" class="test_btn">Like</button>
-      <div class="breadcrumb">
-	<ul>
-	  <li>
-	    <a href="#">Home</a>
-	    <span>&gt;</span>
-	  </li>
-	  <li>記事タイトル</li>
-	</ul>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-
+<div id="jumbotron" class="text-center">
+  <img id="" alt="logo" src="#"/>
+  <h1 id="top_title">stock-intern</h1>
+  <h2 id="top_sub_title">呉高専生のための<br />インターン情報サイト</h2>
 </div>
-
-<div id="box">
-  <div id="main">
-    <div class="entry">
-
-    </div>
-  </div>
+<div class="container">
+  {% for article in articles %}
+  <article>
+    <h3 class="article-title">{{ article.title }}</h3>
+    <p class="article-text" >作成者：{{ article.user_id }}</p>
+    <p class="article-text text-right" >{{ article.created }}</p>
+    <p class="article-text">{{ article.text | truncatewords:20 }}</p>
+    <img class="img-responsive ariticle-img" src="http://lorempixel.com/480/200/cats/" alt="sample image">
+    <a class="btn btn-link pull-right" href="#" role="button">続きを読む</a>
+  </article>
+  {% endfor %}
 </div>
 {% endblock contents %}
 
