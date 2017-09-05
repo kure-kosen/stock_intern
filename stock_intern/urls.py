@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^articles/', include('articles.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^about/', include('about.urls')),
+    url(r'^markdownx/', include('markdownx.urls')),
 ]

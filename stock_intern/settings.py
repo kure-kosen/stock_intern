@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'markdown_deux',
+    'markdownx',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,11 @@ STATIC_URL = '/statics/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "statics"),
 )
+
+# Fetch Django's project directory
+DJANGO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Fetch the project_root
+PROJECT_ROOT = os.path.dirname(DJANGO_ROOT)
+
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+

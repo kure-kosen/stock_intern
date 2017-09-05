@@ -1,7 +1,7 @@
 from django.db import models
+from markdownx.models import MarkdownxField
 from accounts.models import User
 import datetime
-
 
 class Category(models.Model):
     now = datetime.datetime.now
@@ -16,7 +16,7 @@ class Category(models.Model):
 class Article(models.Model):
     now = datetime.datetime.now
     title = models.CharField(max_length=128, default="non title")
-    text = models.TextField()
+    text = MarkdownxField()
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_id')
     category_id = models.ForeignKey(Category, on_delete=models.CASCADE, db_column='category_id')
     created = models.DateTimeField(default=now)
