@@ -1,30 +1,53 @@
 {% load staticfiles %}
-
 <!DOCTYPE html>
 <!-- saved from url=(0030)http://weboook.blog22.fc2.com/ -->
 <html lang="ja">
-    <head>
-	<title>stock-intern</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}"/>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	   -->
-    </head>
-    <body>
-	<header id="header">
-	    <ul class="menu">
-		<li>stock_intern</li>
+  <head>
+    <title>stock-intern</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarExample">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="#">stock-intern</a>
+	  </div>
+	  <div class="collapse navbar-collapse" id="navbarExample">
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a href="#">メニューＡ</a></li>
+	      <li><a href="#">メニューＢ</a></li>
+	      <li><a href="#">メニューＣ</a></li>
 	    </ul>
-	</header>
-	<div class="wrapper">
-	    {% block contents %}{% endblock %}
+	  </div>
 	</div>
-	<footer id="footer">
-	    footer
-	</footer>
-    </body>
+      </nav>
+    </header>
+    <div class="wrapper">
+      {% block contents %}{% endblock %}
+    </div>
+    <footer class="text-center">
+      <img alt="logo" src="#"/>
+      <p>stock-intern</p>
+      <span>stockintern@example.com</span>
+      <ul>
+	<li><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span></li>
+	<li><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span></li>
+	<li><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span></li>
+      </ul>
+      <span>&copy 2017 stock-intern</span>
+    </footer>
+  </body>
 </html>
